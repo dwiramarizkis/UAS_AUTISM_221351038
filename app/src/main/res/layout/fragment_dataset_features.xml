@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/autism_light_blue"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="@color/autism_blue">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@drawable/ic_dataset"
+                        android:tint="@color/white"
+                        android:layout_marginEnd="16dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kamus Data (Fitur)"
+                        android:textAppearance="@style/TextAppearance.App.Headline2"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Penjelasan mendetail untuk setiap fitur (kolom) yang digunakan dalam dataset skrining autisme."
+                    android:textAppearance="@style/TextAppearance.App.Body1"
+                    android:textColor="@color/white"
+                    android:alpha="0.9"
+                    android:lineSpacingExtra="4dp"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Section: AQ-10 Questionnaire -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fitur Kuesioner AQ-10"
+            style="@style/TextAppearance.App.Headline3"
+            android:layout_marginBottom="12dp"/>
+
+        <com.google.android.material.card.MaterialCardView style="@style/DataDictionaryCard">
+            <LinearLayout style="@style/FeatureCard">
+                <ImageView style="@style/FeatureIcon" android:src="@drawable/ic_questionnaire" android:tint="@color/autism_blue"/>
+                <LinearLayout style="@style/FeatureTextContainer">
+                    <TextView style="@style/FeatureTitle" android:text="A1-A10_Score" android:textColor="@color/autism_blue"/>
+                    <TextView style="@style/FeatureDescription" android:text="Jawaban untuk 10 pertanyaan dari kuesioner Autism Spectrum Quotient (AQ-10). Skor 1 untuk 'setuju', 0 untuk 'tidak setuju'. Ini adalah input utama untuk model."/>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Section: Demographics -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fitur Demografis &amp; Riwayat"
+            style="@style/TextAppearance.App.Headline3"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="12dp"/>
+
+        <com.google.android.material.card.MaterialCardView style="@style/DataDictionaryCard">
+            <LinearLayout style="@style/FeatureCard">
+                <ImageView style="@style/FeatureIcon" android:src="@drawable/ic_person" android:tint="@color/autism_orange"/>
+                <LinearLayout style="@style/FeatureTextContainer">
+                    <TextView style="@style/FeatureTitle" android:text="age" android:textColor="@color/autism_orange"/>
+                    <TextView style="@style/FeatureDescription" android:text="Usia partisipan dalam tahun. Faktor demografis kunci yang dapat mempengaruhi pola jawaban."/>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView style="@style/DataDictionaryCard">
+            <LinearLayout style="@style/FeatureCard">
+                <ImageView style="@style/FeatureIcon" android:src="@drawable/ic_person" android:tint="@color/autism_orange"/>
+                <LinearLayout style="@style/FeatureTextContainer">
+                    <TextView style="@style/FeatureTitle" android:text="gender" android:textColor="@color/autism_orange"/>
+                    <TextView style="@style/FeatureDescription" android:text="Jenis kelamin partisipan (m: male, f: female)."/>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView style="@style/DataDictionaryCard">
+            <LinearLayout style="@style/FeatureCard">
+                <ImageView style="@style/FeatureIcon" android:src="@drawable/ic_person" android:tint="@color/autism_orange"/>
+                <LinearLayout style="@style/FeatureTextContainer">
+                    <TextView style="@style/FeatureTitle" android:text="ethnicity" android:textColor="@color/autism_orange"/>
+                    <TextView style="@style/FeatureDescription" android:text="Etnis atau ras partisipan. Data ini membantu dalam analisis keberagaman sampel."/>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView style="@style/DataDictionaryCard">
+            <LinearLayout style="@style/FeatureCard">
+                <ImageView style="@style/FeatureIcon" android:src="@drawable/ic_info" android:tint="@color/success_green"/>
+                <LinearLayout style="@style/FeatureTextContainer">
+                    <TextView style="@style/FeatureTitle" android:text="jundice" android:textColor="@color/success_green"/>
+                    <TextView style="@style/FeatureDescription" android:text="Riwayat penyakit kuning saat lahir (yes/no). Faktor riwayat kesehatan awal."/>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView style="@style/DataDictionaryCard">
+            <LinearLayout style="@style/FeatureCard">
+                <ImageView style="@style/FeatureIcon" android:src="@drawable/ic_info" android:tint="@color/success_green"/>
+                <LinearLayout style="@style/FeatureTextContainer">
+                    <TextView style="@style/FeatureTitle" android:text="austim" android:textColor="@color/success_green"/>
+                    <TextView style="@style/FeatureDescription" android:text="Riwayat autisme pada anggota keluarga (yes/no). Faktor genetis potensial."/>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView style="@style/DataDictionaryCard">
+            <LinearLayout style="@style/FeatureCard">
+                <ImageView style="@style/FeatureIcon" android:src="@drawable/ic_info" android:tint="@color/success_green"/>
+                <LinearLayout style="@style/FeatureTextContainer">
+                    <TextView style="@style/FeatureTitle" android:text="relation" android:textColor="@color/success_green"/>
+                    <TextView style="@style/FeatureDescription" android:text="Hubungan pengisi kuesioner dengan subjek (misal: Self, Parent, dsb)."/>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <!-- Section: Target -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Variabel Target (Hasil)"
+            style="@style/TextAppearance.App.Headline3"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="12dp"/>
+
+        <com.google.android.material.card.MaterialCardView style="@style/DataDictionaryCard">
+            <LinearLayout style="@style/FeatureCard">
+                <ImageView style="@style/FeatureIcon" android:src="@drawable/ic_check" android:tint="@color/error_red"/>
+                <LinearLayout style="@style/FeatureTextContainer">
+                    <TextView style="@style/FeatureTitle" android:text="Class/ASD" android:textColor="@color/error_red"/>
+                    <TextView style="@style/FeatureDescription" android:text="Label klasifikasi akhir. 'YES' jika terindikasi ASD, 'NO' jika tidak. Ini adalah variabel yang coba diprediksi oleh model."/>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView> 

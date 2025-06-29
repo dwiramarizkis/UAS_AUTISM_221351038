@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- Autism Awareness Color Palette -->
+    <color name="autism_blue">#4A90E2</color>      <!-- Primary brand color -->
+    <color name="autism_teal">#50C878</color>      <!-- Secondary/Support -->
+    <color name="autism_orange">#FF6B35</color>    <!-- Accent/CTA -->
+    <color name="autism_light_blue">#E3F2FD</color> <!-- Background -->
+    <color name="autism_gray">#757575</color>      <!-- Text secondary -->
+    <color name="autism_dark_blue">#2E5BBA</color> <!-- Dark variant -->
+    <color name="autism_light_teal">#E8F5E8</color> <!-- Light teal background -->
+    
+    <!-- Result Colors -->
+    <color name="success_green">#4CAF50</color>    <!-- Positive results -->
+    <color name="warning_orange">#FF9800</color>   <!-- Caution -->
+    <color name="error_red">#F44336</color>        <!-- Negative results -->
+    <color name="info_blue">#2196F3</color>        <!-- Information -->
+    
+    <!-- Legacy Colors (keep for compatibility) -->
+    <color name="primary">#1976D2</color>
+    <color name="secondary">#03DAC5</color>
+    <color name="surface">#F5F7FA</color>
+    <color name="accent">#FFB300</color>
+    <color name="result_green_light">#FFE8F5E9</color>
+    <color name="result_green_dark">#FF388E3C</color>
+    <color name="table_row_even">#FFFFFFFF</color>
+    <color name="table_row_odd">#FFF3F3F3</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="table_bg_dark">#23272e</color>
+    <color name="table_header_dark">#23272e</color>
+    <color name="table_row_dark">#2c313a</color>
+    <color name="table_row_dark_alt">#24272e</color>
+    <color name="table_text_light">#f5f6fa</color>
+</resources>

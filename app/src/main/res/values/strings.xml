@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">AUTISM_221351038</string>
+    <string name="about_header_title">Aplikasi Skrining Dini</string>
+    <string name="about_header_subtitle">Spektrum Autisme (Dewasa)</string>
+    <string name="about_section_title">Tentang Aplikasi</string>
+    <string name="about_section_content">Aplikasi ini adalah alat skrining awal untuk membantu mengidentifikasi ciri-ciri yang umum ditemukan pada orang dewasa dengan Gangguan Spektrum Autisme (ASD). Ini BUKAN alat diagnostik. Konsultasikan dengan profesional kesehatan untuk diagnosis yang akurat.</string>
+    <string name="kaggle_dataset_description">Aplikasi ini menggunakan model machine learning yang dilatih pada dataset publik dari Kaggle. Anda dapat melihat detail dataset melalui tombol di bawah ini.</string>
+    <string name="view_dataset_on_kaggle">Lihat Dataset di Kaggle</string>
+    <string name="probability_format">Probabilitas: %.2f%%</string>
+    
+    <!-- Model Architecture Strings -->
+    <string name="model_architecture_title">Model Arsitektur ANN</string>
+    <string name="model_architecture_subtitle">Proses Data Preprocessing dan Modeling untuk Deteksi Autism Spectrum Disorder</string>
+    <string name="data_preprocessing_section">Data Preprocessing</string>
+    <string name="modeling_section">Modeling</string>
+    <string name="performance_summary">Model Performance Summary</string>
+    <string name="model_architecture_transformasi">Transformasi data melibatkan pembersihan data, konversi tipe data, dan handling missing values untuk mempersiapkan input model.</string>
+    <string name="model_architecture_label_fitur">Pemisahan dataset menjadi fitur (X) dan label target (y) untuk proses training model machine learning.</string>
+    <string name="model_architecture_ann">Pembangunan model Artificial Neural Network dengan regularization untuk klasifikasi ASD.</string>
+    <string name="model_architecture_plot_model">Training model dengan early stopping dan visualisasi performa dengan plotting training history.</string>
+    <string name="model_architecture_simulasi">Simulasi prediksi model dengan contoh data untuk testing performa model dalam skenario real-world.</string>
+    <string name="model_architecture_save_model">Konversi dan penyimpanan model ke format TensorFlow Lite untuk deployment di mobile apps.</string>
+    <string name="model_architecture_card_title">Model Arsitektur ANN</string>
+    <string name="model_architecture_card_subtitle">Proses Data Preprocessing dan Modeling untuk Deteksi Autism Spectrum Disorder</string>
+    <string name="model_architecture_data_preprocessing">Data Preprocessing</string>
+    <string name="model_architecture_data_transform">1. Data Transform</string>
+    <string name="model_architecture_label_fitur_title">2. Label dan Fitur</string>
+    <string name="model_architecture_modeling">Modeling</string>
+    <string name="model_architecture_train_data">1. Train Data dan Standarisasi</string>
+    <string name="model_architecture_ann_title">2. Modeling ANN</string>
+    <string name="model_architecture_plot_model_title">3. Plot Model</string>
+    <string name="model_architecture_performance_summary">Model Performance Summary</string>
+    <string name="model_architecture_training_accuracy">• Training Accuracy:</string>
+    <string name="model_architecture_training_accuracy_value">~95%</string>
+    <string name="model_architecture_validation_accuracy">• Validation Accuracy:</string>
+    <string name="model_architecture_validation_accuracy_value">~92%</string>
+    <string name="model_architecture_model_architecture">• Model Architecture:</string>
+    <string name="model_architecture_model_architecture_value">3-Layer ANN (32-16-1)</string>
+    <string name="model_architecture_deployment">Deployment</string>
+    <string name="model_architecture_simulation_title">1. Model Simulation</string>
+    <string name="model_architecture_save_model_title">2. Save Model</string>
+</resources>

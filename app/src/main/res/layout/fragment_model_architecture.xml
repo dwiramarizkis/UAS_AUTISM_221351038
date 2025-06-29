@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FA"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header Section -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="#3F51B5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="16dp"
+                    android:src="@drawable/ic_model"
+                    app:tint="@android:color/white"
+                    android:contentDescription="@string/model_architecture_card_title" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/model_architecture_card_title"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textAlignment="center"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/model_architecture_card_subtitle"
+                    android:textSize="14sp"
+                    android:textColor="#E8EAF6"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Data Preprocessing Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/model_architecture_data_preprocessing"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#2E3440"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Data Transform Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@android:color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/model_architecture_data_transform"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#4A90E2"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/model_architecture_transformasi"
+                    android:textSize="14sp"
+                    android:textColor="#5E6B73"
+                    android:lineSpacingExtra="2dp"
+                    android:layout_marginBottom="12dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="6dp"
+                    app:cardBackgroundColor="#F5F5F5"
+                    app:cardElevation="0dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="# Data Cleaning dan Transform\n# Drop kolom yang tidak diperlukan\ndf = df.drop('age_desc', axis=1)\n\n# Hapus data outlier\ndf = df.drop(df[df['age'] == '383'].index)\n\n# Konversi age ke numerik\ndf['age'] = pd.to_numeric(df['age'])\n\n# Handle missing values\ndf['age'].fillna(df['age'].mean(), inplace=True)\ndf['ethnicity'].fillna(df['ethnicity'].mode()[0], inplace=True)\ndf['relation'].fillna(df['relation'].mode()[0], inplace=True)"
+                        android:textSize="12sp"
+                        android:fontFamily="monospace"
+                        android:textColor="#2E3440"
+                        android:padding="12dp" />
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Label dan Fitur Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@android:color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/model_architecture_label_fitur_title"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#4A90E2"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/model_architecture_label_fitur"
+                    android:textSize="14sp"
+                    android:textColor="#5E6B73"
+                    android:lineSpacingExtra="2dp"
+                    android:layout_marginBottom="12dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="6dp"
+                    app:cardBackgroundColor="#F5F5F5"
+                    app:cardElevation="0dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="# Separate features and labels\nX = df.drop('Class/ASD', axis=1)  # Features\ny = df['Class/ASD']               # Target labels\n\nprint(f'Features shape: [X.shape]')\nprint(f'Labels shape: [y.shape]')\n\n# Feature names\nfeature_names = X.columns.tolist()\nprint(f'Features: [feature_names[:5]]…')  # Show first 5 features"
+                        android:textSize="12sp"
+                        android:fontFamily="monospace"
+                        android:textColor="#2E3440"
+                        android:padding="12dp" />
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Modeling Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/model_architecture_modeling"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#2E3440"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Train Data dan Standarisasi Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@android:color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/model_architecture_train_data"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#E74C3C"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/model_architecture_transformasi"
+                    android:textSize="14sp"
+                    android:textColor="#5E6B73"
+                    android:lineSpacingExtra="2dp"
+                    android:layout_marginBottom="12dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="6dp"
+                    app:cardBackgroundColor="#F5F5F5"
+                    app:cardElevation="0dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="# Data Preparation dan Feature Engineering\n# One-hot encoding untuk categorical variables\nX_encoded = pd.get_dummies(X, columns=[\n    'gender', 'ethnicity', 'jundice', 'austim',\n    'contry_of_res', 'used_app_before', 'relation'\n], drop_first=True)\n\n# Label encoding untuk target variable\nle = LabelEncoder()\ny_encoded = le.fit_transform(y)\n\n# Split data menjadi training dan testing\nX_train, X_test, y_train, y_test = train_test_split(\n    X_encoded, y_encoded, test_size=0.2,\n    random_state=42, stratify=y_encoded)\n\n# Standardisasi menggunakan MinMaxScaler\nscaler = MinMaxScaler()\nX_train_scaled = scaler.fit_transform(X_train)\nX_test_scaled = scaler.transform(X_test)"
+                        android:textSize="12sp"
+                        android:fontFamily="monospace"
+                        android:textColor="#2E3440"
+                        android:padding="12dp" />
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Modeling ANN Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@android:color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/model_architecture_ann_title"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#E74C3C"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/model_architecture_ann"
+                    android:textSize="14sp"
+                    android:textColor="#5E6B73"
+                    android:lineSpacingExtra="2dp"
+                    android:layout_marginBottom="12dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="6dp"
+                    app:cardBackgroundColor="#F5F5F5"
+                    app:cardElevation="0dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="# Import libraries untuk modeling\nfrom tensorflow.keras.regularizers import l2\nfrom tensorflow.keras.callbacks import EarlyStopping\n\n# Build ANN model dengan regularization\nmodel = keras.Sequential([\n    layers.Input(shape=(X_train_scaled.shape[1],)),\n    layers.Dense(32, activation=&quot;relu&quot;, kernel_regularizer=l2(0.01)),\n    layers.Dropout(0.5),\n    layers.Dense(16, activation=&quot;relu&quot;, kernel_regularizer=l2(0.01)),\n    layers.Dropout(0.3),\n    layers.Dense(1, activation=&quot;sigmoid&quot;)\n])\n\n# Compile model\nmodel.compile(optimizer=&quot;adam&quot;, loss=&quot;binary_crossentropy&quot;, metrics=[&quot;accuracy&quot;])\n\n# Model summary\nmodel.summary()\nplot_model(model, show_shapes=True)"
+                        android:textSize="12sp"
+                        android:fontFamily="monospace"
+                        android:textColor="#2E3440"
+                        android:padding="12dp" />
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Plot Model Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@android:color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/model_architecture_plot_model_title"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#E74C3C"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/model_architecture_plot_model"
+                    android:textSize="14sp"
+                    android:textColor="#5E6B73"
+                    android:lineSpacingExtra="2dp"
+                    android:layout_marginBottom="12dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="6dp"
+                    app:cardBackgroundColor="#F5F5F5"
+                    app:cardElevation="0dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="# Training dengan Early Stopping\nearly_stopping = EarlyStopping(monitor='val_loss', patience=15, restore_best_weights=True)\n\nhistory = model.fit(X_train_scaled, y_train, epochs=200,\n    validation_data=(X_test_scaled, y_test), callbacks=[early_stopping])\n\n# Evaluasi model\nloss, accuracy = model.evaluate(X_test_scaled, y_test, verbose=0)\nprint(f&quot;Test Accuracy: [accuracy*100:.2f]%&quot;)\n\n# Plot training history\nplt.figure(figsize=(12, 5))\nplt.subplot(1, 2, 1)\nplt.plot(history.history['accuracy'], label='Training Accuracy')\nplt.plot(history.history['val_accuracy'], label='Validation Accuracy')\nplt.title('Akurasi Model')\nplt.legend()\n\nplt.subplot(1, 2, 2)\nplt.plot(history.history['loss'], label='Training Loss')\nplt.plot(history.history['val_loss'], label='Validation Loss')\nplt.title('Loss Model')\nplt.legend()\n\n# Classification Report dan Confusion Matrix\ny_pred_prob = model.predict(X_test_scaled)\ny_pred_classes = (y_pred_prob > 0.5).astype(&quot;int32&quot;)\nprint(classification_report(y_test, y_pred_classes, target_names=['NO', 'YES']))\nsns.heatmap(confusion_matrix(y_test, y_pred_classes), annot=True, fmt='d', cmap='Blues')"
+                        android:textSize="12sp"
+                        android:fontFamily="monospace"
+                        android:textColor="#2E3440"
+                        android:padding="12dp" />
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Performance Summary Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="#E8F5E8">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/model_architecture_performance_summary"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#2E7D4F"
+                    android:layout_marginBottom="12dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/model_architecture_training_accuracy"
+                        android:textSize="14sp"
+                        android:textColor="#5E6B73" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/model_architecture_training_accuracy_value"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#2E7D4F" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/model_architecture_validation_accuracy"
+                        android:textSize="14sp"
+                        android:textColor="#5E6B73" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/model_architecture_validation_accuracy_value"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#2E7D4F" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/model_architecture_model_architecture"
+                        android:textSize="14sp"
+                        android:textColor="#5E6B73" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/model_architecture_model_architecture_value"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#2E7D4F" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Deployment Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/model_architecture_deployment"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#2E3440"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Model Simulation Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@android:color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/model_architecture_simulation_title"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#FF6B35"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/model_architecture_simulasi"
+                    android:textSize="14sp"
+                    android:textColor="#5E6B73"
+                    android:lineSpacingExtra="2dp"
+                    android:layout_marginBottom="12dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="6dp"
+                    app:cardBackgroundColor="#F5F5F5"
+                    app:cardElevation="0dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="# Sample data untuk testing\nsample_data = [\n    'A1_Score': 1, 'A2_Score': 1, 'A3_Score': 0, 'A4_Score': 1,\n    'A5_Score': 1, 'A6_Score': 0, 'A7_Score': 1, 'A8_Score': 1,\n    'A9_Score': 1, 'A10_Score': 1, 'age': 27.0, 'gender': 'm',\n    'ethnicity': 'Latino', 'jundice': 'yes', 'austim': 'yes',\n    'contry_of_res': 'Spain', 'used_app_before': 'no',\n    'result': 8.0, 'relation': 'Parent'\n]\n\n# Preprocessing untuk prediksi\nsample_df = pd.DataFrame([sample_data])\nsample_encoded = pd.get_dummies(sample_df, columns=categorical_cols, drop_first=True)\nfinal_sample = sample_encoded.reindex(columns=X_encoded.columns, fill_value=0)\nsample_scaled = scaler.transform(final_sample)\n\n# Prediksi\npredicted_prob = model.predict(sample_scaled)\npredicted_class = 1 if predicted_prob >= 0.5 else 0\npredicted_label = le.inverse_transform([predicted_class])[0]\n\nprint(f&quot;Probabilitas: [predicted_prob[0][0]:.4f]&quot;)\nprint(f&quot;Hasil prediksi: [predicted_label]&quot;)"
+                        android:textSize="12sp"
+                        android:fontFamily="monospace"
+                        android:textColor="#2E3440"
+                        android:padding="12dp" />
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Save Model Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@android:color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/model_architecture_save_model_title"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#FF6B35"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/model_architecture_save_model"
+                    android:textSize="14sp"
+                    android:textColor="#5E6B73"
+                    android:lineSpacingExtra="2dp"
+                    android:layout_marginBottom="12dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="6dp"
+                    app:cardBackgroundColor="#F5F5F5"
+                    app:cardElevation="0dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="# Konversi model ke TensorFlow Lite\nconverter = tf.lite.TFLiteConverter.from_keras_model(model)\ntflite_model = converter.convert()\n\n# Simpan model TFLite\nwith open('autism-screening-on-adults.tflite', 'wb') as f:\n    f.write(tflite_model)\n\n# Simpan preprocessing tools\nimport joblib\njoblib.dump(le, 'label_encoder.pkl')\njoblib.dump(scaler, 'scaler.pkl')\n\nprint(&quot;✅ Model berhasil disimpan!&quot;)\nprint(&quot;📱 Siap untuk deployment di Android App&quot;)"
+                        android:textSize="12sp"
+                        android:fontFamily="monospace"
+                        android:textColor="#2E3440"
+                        android:padding="12dp" />
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>
